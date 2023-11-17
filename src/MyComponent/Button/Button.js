@@ -1,4 +1,4 @@
-import React, { children } from 'react'
+import React from 'react'
 import './Button.css'
 function Button({children}) {
   return (
