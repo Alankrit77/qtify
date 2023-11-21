@@ -12,6 +12,7 @@ function Navbar() {
             <img src='Group 1logo (1).png'  />
             <SearchBox/>
             <Button >Give Feedback</Button>
+          
         </div>
 
     );
