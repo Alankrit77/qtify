@@ -11,6 +11,9 @@ display: flex;
 align-items: center;
 color: var(--css-white);
 }
+.hs-content h1{
+    text-align: center;
+}
 .hs-img-frame{
     width: 212px;
     height: 212px;
