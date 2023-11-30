@@ -4,6 +4,7 @@ import React from 'react';
 import './Card.css';
 
 function Card({imgSrc,followersCount,label}) {
+  console.log('Label:', label);
   
   return (
     <div className='card-wrapper'>
@@ -15,10 +16,10 @@ function Card({imgSrc,followersCount,label}) {
           <span className='card-content-pill'>{followersCount} follows</span>
         </div>
       </div>
-      <p className='card-label'>{label} </p>
+      <p className='card-label'> {label}</p>
     </div>
   );
 }
 
 export default Card;
- 
+  

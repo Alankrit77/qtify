@@ -9,9 +9,10 @@ function Section({title , data}) {
         {data.map(cardData => <Card
         key={cardData.id}
          imgSrc={cardData.image}
-         label={cardData.label}
          followersCount={cardData.follows}
-        />)}
+         label={cardData.title}
+         />)}
+         
         </div>
     </div>
   )

@@ -10,27 +10,15 @@ function App() {
   const [newAlbums, setNewAlbums] = useState([]);
 
   useEffect(() => {
-    axios.get('https://qtify-backend-labs.crio.do/albums/top').then((response) => {
-      const data = response.data;
-
-      if (Array.isArray(data)) {
-        setTopAlbums(data);
-      } else {
-        console.error('Unexpected data format for top albums:', data);
-      }
+    axios.get('https://qtify-backend-labs.crio.do/albums/top').then(({data}) => {
+      setTopAlbums(data)
     });
   }, []);
 
   useEffect(() => {
-    axios.get('https://qtify-backend-labs.crio.do/albums/new').then((response) => {
-      const data = response.data;
-
-      if (Array.isArray(data)) {
-        setNewAlbums(data);
-      } else {
-        console.error('Unexpected data format for new albums:', data);
-      }
-    });
+    axios.get('https://qtify-backend-labs.crio.do/albums/new').then(({data}) => {
+    setNewAlbums(data)
+  });
   }, []);
 
   return (
