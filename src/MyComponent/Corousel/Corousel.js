@@ -7,7 +7,7 @@ import Card from "../Card/Card";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import './Corousel.css'
+import './Corousel.css'  
 
 function Corousel({data}) {
   return (
@@ -19,7 +19,7 @@ function Corousel({data}) {
     // centeredSlides={true}
     spaceBetween={-400}
     // navigation={true}
-    navigation = {{nextEl : ".arrow-left" ,prevEl : ".arrow-right"}}
+    navigation = {{nextEl : ".arrow-right" ,prevEl : ".arrow-left"}}
     virtual
   >
      {data.map(cardData =>   <SwiperSlide key={cardData.id}><Card
@@ -32,9 +32,9 @@ function Corousel({data}) {
          <div className='arrow-left arrow'><img src='left.png'/></div>
          <div className='arrow-right arrow'><img  src='right.png'/></div>
 </div>
-  
-  
+
+
   )
 }
 
-export default Corousel
+export default Corousel;
